@@ -2,17 +2,17 @@
 
 namespace At.Matus.UtilityMeter
 {
-    public class ElectricityMeterReading : IUtilityMeterReading
+    public class HeatMeterReading : IUtilityMeterReading
     {
         public DateTime TimeStamp { get; }
         public double Reading { get; }
-        public string Unit { get; } = "kWh";
+        public string Unit { get; } = "MWh";
         public string MeterID { get; }
         public string Comment { get; }
 
-        public ElectricityMeterReading(DateTime timeStamp, double reading, string meterID) : this(timeStamp, reading, meterID, string.Empty){}
+        public HeatMeterReading(DateTime timeStamp, double reading, string meterID) : this(timeStamp, reading, meterID, string.Empty) { }
 
-        public ElectricityMeterReading(DateTime timeStamp, double reading, string meterID, string comment)
+        public HeatMeterReading(DateTime timeStamp, double reading, string meterID, string comment)
         {
             TimeStamp = timeStamp;
             Reading = reading;
