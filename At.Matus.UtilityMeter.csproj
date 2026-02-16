@@ -41,16 +41,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstractions\IUtilityMeter.cs" />
     <Compile Include="Abstractions\IUtilityMeterReading.cs" />
-    <Compile Include="BaseRate.cs" />
-    <Compile Include="BaseUtilityMeter.cs" />
+    <Compile Include="Domain\ElectricityMeter.cs" />
     <Compile Include="Domain\ElectricityMeterReading.cs" />
+    <Compile Include="Domain\HeatMeter.cs" />
     <Compile Include="Domain\HeatMeterReading.cs" />
-    <Compile Include="ElectricityMeter.cs" />
+    <Compile Include="Domain\WaterMeter.cs" />
+    <Compile Include="Domain\WaterMeterReading.cs" />
     <Compile Include="Extensions\UmrTools.cs" />
-    <Compile Include="HeatMeter.cs" />
+    <Compile Include="Extensions\UmTools.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="WaterMeter.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -6,7 +6,7 @@ namespace At.Matus.UtilityMeter
     {
         public DateTime TimeStamp { get; }
         public double Reading { get; }
-        public string Unit { get; } = "kWh";
+        public string UnitSymbol { get; } = "kWh";
         public string MeterID { get; }
         public string Comment { get; }
 
@@ -20,11 +20,9 @@ namespace At.Matus.UtilityMeter
             Comment = comment.Trim();
         }
 
-        public string GetCsvLine() => this.GetCsvLine();
+        public int CompareTo(IUtilityMeterReading other) => this.CompareToBase(other);
 
-        public int CompareTo(IUtilityMeterReading other) => this.CompareTo(other);
-
-        public bool IsSameMeter(IUtilityMeterReading other) => this.IsSameMeter(other);
+        public override string ToString() => this.GetDescription();
 
     }
 }
